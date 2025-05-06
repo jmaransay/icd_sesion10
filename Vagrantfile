@@ -22,8 +22,9 @@ Vagrant.configure("2") do |config|
       end
   end
 
-  config.vm.provision "shell", path: "brew.sh", privileged: false
   config.vm.provision "shell", path: "dvc.sh"
+  config.vm.provision "shell", path: "brew.sh", privileged: false
+
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
