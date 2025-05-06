@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
       end
   end
 
-  config.vm.provision "shell", path: "brew.sh"
+  config.vm.provision "shell", path: "brew.sh", privileged: false
   config.vm.provision "shell", path: "dvc.sh"
 
   # Disable automatic box update checking. If you disable this, then
